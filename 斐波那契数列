@@ -1,0 +1,20 @@
+
+#define _CRT_SECURE_NO_WARNINGS  //避免scanf报错
+#include <stdio.h>
+
+void main(void)
+{
+    printf("%d \n", fibonacci(10));
+    system("PAUSE");//结束不退出
+}
+
+//斐波那契数列，第一二项为1；后面的每一项为前两项之和
+int fibonacci(int a){
+    if (a == 1 || a == 2)
+    {
+        return 1;
+    }
+    else{
+        return fibonacci(a - 1) + fibonacci(a - 2);
+    }
+}
